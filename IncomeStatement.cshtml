@@ -1,0 +1,75 @@
+﻿
+@model IEnumerable<CarRental.Models.Booked>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <style type="text/css">
+        .table-bordered {
+            border: double;
+        }
+        .table-responsive{
+            background:inherit;
+        }
+        p{
+            font:600;
+            background-color:chartreuse;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br />
+    <br />
+    <p> <b>Booked Car Detail</b></p>
+
+    <div class="table-responsive">
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>CustFirstName</th>
+                    <th>CustLastName</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>CarHireDate</th>
+                    <th>DueDate</th>
+                    <th>Rate</th>
+                    <th>Qty</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ca in Model)
+            {
+                    <tr>
+                       <td>@ca.Id</td>
+                        <td>@ca.CusFirstName </td>
+                        <td>@ca.CusLastName</td>
+                        <td>@ca.Brand</td>
+                        <td>@ca.Model</td>
+                        <td>@ca.CarHireDate</td>
+                        <td>@ca.DueDate</td>
+                        <td>@ca.Rate</td>
+                        <td>@ca.Qty</td>
+
+
+                    </tr>
+                }
+            </tbody>
+
+
+        </table>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <p><b><i>Total Sales: $@ViewBag.income</i></b></p>
+
+</body>
+</html>

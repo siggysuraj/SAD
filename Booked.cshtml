@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CarRental.Models.Booked>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Customer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Booked Car</h2>
+        <form class="form-horizontal" asp-action="Booked" method="post">
+
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="CusFirstName">CusFirstName:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="CusFirstName" placeholder="Enter First Name" name="CusFirstName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="CusLastName">CustLastName:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="CustLastName" placeholder="Enter Last name" name="CusLastName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Brand">Brand:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Brand" placeholder="Enter Brand" name="Brand">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Model">Model:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Model" placeholder="Enter Model" name="Model">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="CarHireDate">CarHireDate:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="CarHireDate" placeholder="Enter Hire Date" name="CarHireDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="DueDate">DueDate:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="DueDate" placeholder="Enter Due Date" name="DueDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Rate">Rate:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Rate" placeholder="Enter Rate" name="Rate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Qty">Qty:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Qty" placeholder="Enter Qty" name="Qty">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Booked Car</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

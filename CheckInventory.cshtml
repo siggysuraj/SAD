@@ -1,0 +1,71 @@
+﻿
+@model CarRental.Models.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <style type="text/css">
+        .table-bordered {
+            border: double;
+        }
+        b{
+     
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:crimson;
+            font-size:x-large;
+        }
+    </style>
+    </head>
+    <body>
+    <div>
+
+    </div>
+    <h1> Check Inventory</h1>
+    <br />
+    <br />
+    <div>
+        @using (Html.BeginForm("CheckInventory", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(a => a.Brand):</td>
+                    <td>@Html.TextBoxFor(a => a.Brand)</td>
+                    <td>@Html.ValidationMessageFor(a => a.Brand)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(a => a.Model):
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(a => a.Model)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(a => a.Model)
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Check" class="btn-primary" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        }
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div>
+            <p><b> Brand:   @ViewBag.Brand</b></p>
+            <p><b>Model:   @ViewBag.Model</b></p>
+            <p><b>Stock Level:   @ViewBag.Qty</b></p>
+        </div>
+    </div>
+
+</body>
+  
+    </html>

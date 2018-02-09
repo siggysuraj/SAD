@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CarRental.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <style type="text/css">
+        .table-bordered {
+            border: double;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br />
+    <br />
+    <h1><b>List Of Car</b></h1>
+
+    <div class="table-responsive">
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Id </th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Rate</th>
+                    <th>Qty</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var car in Model)
+            {
+                    <tr>
+                        <td>@car.Id </td>
+                        <td>@car.Brand </td>
+                        <td>@car.Model</td>
+                        <td>@car.Rate</td>
+                        <td>@car.Qty</td>
+                        
+                    </tr>
+                }
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+</body>
+</html>
